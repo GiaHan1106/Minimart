@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: #f2f2f6;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.navbar {
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+.navbar .navbar-toggler i {
+    color: rgb(151, 150, 150);
+    border: 1px solid rgb(151, 150, 150);
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 25px;
+}
+.navbar .navbar-brand img {
+    width: 95px;
+}
+.navbar .collapse .nav-item .nav-link {
+    color: rgb(18, 18, 123);
+    font-weight: 600;
+    margin-right: 10px;
+    margin-left: 10px;
+    align-items: center;
+}
+.navbar .nav-icon i {
+    background-color: rgb(239, 239, 255);
+    padding: 15px 12px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+.carousel {
+    margin-top: 50px;
+}
+.carousel-inner .carousel-item {
+    position: relative;
+}
+.carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    top: 40%;
+    left: 80px;
+    text-align: left;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.carousel-inner .carousel-item .carousel-caption .h5 {
+    color: #96ae00;
+}
+.carousel-inner .carousel-item .carousel-caption h2 {
+    color: rgb(18, 18, 123);
+    font-family: "Nerko One", cursive;
+    font-size: 70px;
+}
+.carousel-inner .carousel-item .carousel-caption h2 span {
+    display: block;
+}
+.carousel-inner .carousel-item .carousel-caption p {
+    color: #000;
+    font-size: 15px;
+}
+.carousel-inner .carousel-item .carousel-caption p span {
+    display: block;
+}
+.carousel-inner .carousel-item .carousel-caption .button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #96ae00;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.carousel-inner .carousel-item .carousel-caption button:hover {
+    background-color: rgb(18, 18, 123);
+}
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+    background-color: #96ae00;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    position: absolute;
+    background-size: 50%;
+}
+.carousel-control-prev .carousel-control-prev-icon {
+    left: 25px;
+}
+.cate {
+    margin-top: 40px;
+}
+.cate .card {
+    padding: 15px 45px 0;
+    box-shadow: none;
+    border: none;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.cate .card:hover {
+    transform: translateY(-10px);
+}
+.cate .card img {
+    border-radius: 50%;
+    width: 80%;
+    margin: 0 auto;
+}
+.cate .card .text {
+    text-align: center;
+}
+.cate .card .text p {
+    color: rgb(197, 197, 197);
+    font-size: 15px;
+}
+.cate .card .text h5 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.product {
+    margin-top: 80px;
+    text-align: center;
+}
+.product .top .first {
+    color: #96ae00;
+}
+.product .top h1 {
+    font-family: "Nerko One", cursive;
+    color: rgb(18, 18, 123);
+}
+.product .top .third {
+    color: rgb(18, 18, 123);
+}
+.product .nav .nav-item .nav-link {
+    transition: 0.5s;
+    color: rgb(18, 18, 123);
+    font-weight: 500;
+}
+.product .nav .nav-item:hover .nav-link {
+    color: #96ae00;
+}
+.product .nav .nav-item .nav-link.active {
+    background-color: transparent;
+    color: #96ae00;
+}
+.product .nav {
+    justify-content: center;
+}
+.product .card {
+    position: relative;
+    background-color: #f7f7f9;
+}
+.product .card img {
+    width: 100%;
+    border-radius: 6px;
+}
+.product:hover .card {
+    transform: none;
+}
+.product .card .content {
+    font-size: 10px;
+    text-align: left;
+    padding: 10px 15px;
+}
+.product .card .content .fresh {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.product .card .content h5 {
+    font-size: 15px;
+    color: rgb(18, 18, 123);
+}
+.product .card .content .star i {
+    color: #fc0;
+    margin-right: 2px;
+}
+.product .card .content .price {
+    color: rgb(230, 0, 0);
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.product .card .content .price span {
+    color: rgb(205, 205, 205);
+    margin-left: 8px;
+    font-size: 13px;
+    text-decoration-line: line-through;
+}
+.product .card .thumb {
+    position: relative;
+}
+.product .card .thumb .sale {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: rgb(255, 213, 213);
+    color: rgb(230, 0, 0);
+    font-size: 13px;
+    padding: 2px 10px;
+}
+.product .card .info {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffe0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    border-radius: 6px;
+}
+.product .card:hover .info {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+}
+.product .info .content {
+    text-align: left;
+}
+.product .info .content button {
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #96ae00;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.5s;
+}
+.product .info .content button:hover {
+    background-color: rgb(18, 18, 123);
+}
+.product .info .content ul {
+    list-style: none;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 0;
+    font-weight: 500;
+}
+.parentthumb .childthumb {
+    margin-top: 80px;
+}
+.parentthumb .childthumb .top {
+    margin-bottom: 25px;
+}
+.parentthumb .childthumb .top .best {
+    color: #96ae00;
+}
+.parentthumb .childthumb .top .organic {
+    color: rgb(18, 18, 123);
+    font-size: 30px;
+    font-family: "Nerko One", cursive;
+}
+.parentthumb .childthumb .top .easy {
+    color: #96ae00;
+    font-weight: 700;
+    font-size: 35px;
+}
+.parentthumb .childthumb .top .easy span {
+    color: rgb(18, 18, 123);
+}
+.parentthumb .childthumb .top .the {
+    color: rgb(18, 18, 123);
+}
+.parentthumb .childthumb .top .the span {
+    display: block;
+}
+.parentthumb .childthumb .right .one {
+    color: rgb(18, 18, 123);
+    font-size: 14px;
+    font-weight: 700;
+}
+.parentthumb .childthumb .right .onechild {
+    font-size: 14px;
+}
+.parentthumb .childthumb .right .one::after {
+    content: "";
+    display: block;
+    border-bottom: 1.5px dotted rgb(18, 18, 123);
+    margin-top: 10px;
+}
+.parentthumb .childthumb .right .button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #96ae00;
+    color: #fff;
+    transition: 0.5s;
+    margin-top: 6px;
+    font-size: 20px;
+}
+.parentthumb .childthumb .right .button:hover {
+    background-color: rgb(18, 18, 123);
+}
+.parentthree .threepic {
+    position: relative;
+    margin-top: 70px;
+}
+.parentthree .threepic img {
+    width: 98%;
+}
+.parentthree .threepic .text {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.parentthree .threepic .text .top {
+    color: #fc0;
+}
+.parentthree .threepic .text .eat {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+.parentthree .threepic .text .eat span {
+    display: block;
+}
+.parentthree .threepic .text .free {
+    color: #fff;
+    margin-top: 10px;
+}
+.last {
+    margin-top: 50px;
+}
+.last .text {
+    text-align: center;
+}
+.last .text .read {
+    color: #96ae00;
+}
+.last .text .our {
+    color: rgb(18, 18, 123);
+    font-family: "Nerko One", cursive;
+}
+.last .text .the {
+    color: rgb(18, 18, 123);
+}
+.last .card {
+    border: none;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.last .card .thumb {
+    overflow: hidden;
+}
+.last .card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 0.5s;
+}
+.last .card:hover img {
+    transform: scale(1.1);
+}
+.last .card .info {
+    padding: 19px 10px 2px 18px;
+}
+.last .card .info .way {
+    color: rgb(18, 18, 123);
+    font-size: 15px;
+    font-weight: 700;
+}
+.last .card .info .these {
+    font-size: 12px;
+    color: rgb(18, 18, 123);
+    margin-top: 8px;
+}
+.last .row .col-lg-3 .card .info .continue {
+    color: #96ae00;
+    font-weight: 700;
+}
+.footer {
+    background-color: rgb(18, 18, 123);
+    margin-top: 70px;
+}
+.footer .childfooter {
+    color: #fff;
+    margin: 40px 0;
+}
+.footer .childfooter .let {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.footer .childfooter .if {
+    color: rgb(196, 195, 195);
+    font-size: 13px;
+    margin-top: 30px;
+}
+.footer .childfooter .if span {
+    color: #96ae00;
+    font-weight: 700;
+}
+.footer .childfooter .social {
+    color: rgb(196, 195, 195);
+    font-weight: 700;
+    font-size: 13px;
+}
+.footer .childfooter .icon i {
+    color: #fff;
+    margin-right: 15px;
+}
+.footer .childfooter .date {
+    color: rgb(196, 195, 195);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.footer .childfooter .date span {
+    color: #fff;
+    font-weight: 700;
+}
+.footer .childfooter .date2 {
+    color: rgb(196, 195, 195);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.footer .childfooter .date2 span {
+    color: #fff;
+    font-weight: 700;
+}
+.footer .childfooter .date3 {
+    color: rgb(196, 195, 195);
+    font-size: 13px;
+}
+.footer .childfooter .date span {
+    color: #fff;
+    font-weight: 700;
+}
+.footer .childfooter .date3 span {
+    color: #fff;
+    font-weight: 700;
+}
+.footer .childfooter .text {
+    color: rgb(196, 195, 195);
+    font-size: 13px;
+    margin-bottom: -15px;
+    margin-top: 30px;
+}
+.footer .childfooter .text p {
+    margin-bottom: 13px;
+}
+.footer .childfooter input {
+    color: rgb(196, 195, 195);
+    padding: 13px 15px;
+    width: 110%;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+}
+.footer .childfooter .input {
+    position: relative;
+}
+.footer .childfooter .input .button button {
+    background-color: #96ae00;
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 4px;
+    right: -21px;
+    transition: 0.5s;
+    border: none;
+}
+.footer .childfooter .button button:hover {
+    background-color: rgb(18, 18, 123);
+}
+@media (max-width: 991px) {
+    .navbar .navbar-collapse {
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        background-color: #fff;
+        z-index: 1;
+        padding: 15px;
+    }
+    .carousel-caption .h5,
+    .carousel-caption p,
+    .carousel-caption button {
+        display: none;
+    }
+    .carousel-inner .carousel-item .carousel-caption h2 {
+        font-size: 30px;
+    }
+    .cate .card {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .tab-content .tab-pane .card {
+        margin-bottom: 18px;
+    }
+}
+@media (max-width: 575px) {
+    .carousel-inner .carousel-item .carousel-caption {
+        top: 38%;
+        left: 25px;
+    }
+    .carousel-inner .carousel-item .carousel-caption h2 {
+        font-size: 20px;
+    }
+    .cate .card {
+        padding: 15px;
+    }
+    .footer .childfooter input {
+        width: 100%;
+    }
+    .footer .childfooter .input .button button {
+        right: 6px;
+    }
+    .product {
+        margin-top: 40px;
+    }
+    .parentthumb .childthumb {
+        margin-top: 40px;
+    }
+    .parentthumb .childthumb .top .easy {
+        font-size: 25px;
+    }
+    .parentthumb .childthumb .top .organic {
+        font-size: 20px;
+    }
+    .parentthumb .childthumb .top .the {
+        font-size: 15px;
+    }
+    .parentthree .threepic {
+        margin-top: 20px;
+    }
+    .last .card .info {
+        padding: 14px 6px 0px 10px;
+    }
+    .last .card {
+        margin-bottom: 20px;
+    }
+    .footer .childfooter {
+        margin: 20px 0;
+    }
+    .footer {
+        padding-top: 15px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 376px) {
+    .navbar .nav-icon i {
+        font-size: 10px;
+        padding: 10px 12px;
+    }
+    .navbar .navbar-toggler i {
+        font-size: 15px;
+        padding: 6px 10px;
+    }
+}
+@media (max-width: 339px) {
+    .navbar .navbar-brand img {
+        width: 70px;
+    }
+}
